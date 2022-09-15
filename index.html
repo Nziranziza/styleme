@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Insert try-on button with data-retailer-sku and data-retailer-color -->
+  <div class="product-list">
+    <div class="product" data-retailer-sku="8523" data-retailer-color="black">
+      <img class="product-img" src="https://via.placeholder.com/250x400">
+    </div>
+    <div class="product" data-retailer-sku="8515" data-retailer-color="navy">
+      <img class="product-img" src="https://via.placeholder.com/250x400">
+    </div>
+    <div class="product" data-retailer-sku="8162" data-retailer-color="hot pink">
+      <img class="product-img" src="https://via.placeholder.com/250x400">
+    </div>
+    <div class="product" data-retailer-sku="8523" data-retailer-color="burgundy">
+      <img class="product-img" src="https://via.placeholder.com/250x400">
+    </div>
+    <div class="product" data-retailer-sku="8538" data-retailer-color="navy">
+      <img class="product-img" src="https://via.placeholder.com/250x400">
+    </div>
+    <div class="product" data-retailer-sku="8521" data-retailer-color="black">
+      <img class="product-img" src="https://via.placeholder.com/250x400">
+    </div>
+  </div>
+
+    <!-- Install Style.Me SDK -->
+    <script src="https://www.style.me/styleme-api/en.styleme-retailer.js"></script>
+
+  <!-- Initial Style.ME SDK with retailerID -->
+  <script>
+    window.styleMeAsyncInit = function (StyleMeSDK) {
+      const sdk = new StyleMeSDK({
+        retailerID: '0f85d042-ed6f-4d2b-847a-2a7881910e8f',
+      });
+      sdk.createTryOnButtons();
+    };
+    window.styleMeAsyncInit(StyleMeSDK);
+  </script>
+  <style>
+    .product-list {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+  </style>
+</body>
+
+</html>
